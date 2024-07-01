@@ -1,8 +1,8 @@
-const e = require('node:express')
+const express = require('node:express')
 const ditto = require ('./pokemon/ditto.json')
 const app = express();
 app.disable('x-powered-by')
-const port = process.env.port ?? 3000
+const PORT = process.env.PORT ?? 3000
 
 app.use(express.json())
 
@@ -37,6 +37,6 @@ app.post('/pokemon',(req,res)=>{
 app.use((req,res)=>{
     res.status(404).send('<h1>404</h1>')
 })
-app.listen(port,()=>{
-    console.log("SERVER LISTENING ON PORT: ", port)
+app.listen(PORT,()=>{
+    console.log("SERVER LISTENING ON PORT: ", PORT)
 })
