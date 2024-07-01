@@ -1,4 +1,4 @@
-const express = require('node:express')
+const express = require('express')
 const ditto = require ('./pokemon/ditto.json')
 const app = express()
 app.disable('x-powered-by')
